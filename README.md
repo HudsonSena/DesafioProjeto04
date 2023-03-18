@@ -16,7 +16,7 @@ Project building from "Rocktseat" classes.
 
 - image edits
 - width for mobile
-- transitions
+- transitions and scale
 - aplications tag div for cards
 
 # Contact
