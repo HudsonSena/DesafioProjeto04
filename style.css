@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-style: normal;
+    font-weight: 400;
+}
+
+:root {
+    --textSmall: 'Palanquin', sans-serif;
+    --textLarge: 'Staatliches', cursive;
+
+    --colorHeader: #8E9AAF;
+    --colorMain: #EFF1FF;
+    --colorText: #4A4E69;
+    --colorBkText: #FEEAFA;
+    --colorBkH1: #CBC0D3;
+
+    font-size: 62.5%;
+}
+
+body {
+    width: 38.4rem;
+    margin: auto;
+}
+
+header {
+    background-color: var(--colorHeader);
+    color: white;
+
+    height: 28.0rem;
+    text-align: center;
+}
+
+header img {
+    margin-top: 3.2rem;
+}
+
+#h1header {
+    background-color: var(--colorBkH1);
+    height: 4.0rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2.0rem;
+}
+
+main {
+    background-color: var(--colorMain);
+
+    text-align: center;   
+
+    padding: 1.4rem 3.2rem 6.0rem 3.2rem;
+}
+
+h1 {
+    font-family: var(--textLarge);
+    color: white;
+
+    font-weight: 400;
+    font-size: 4.0rem;
+    line-height: 3.4rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.2rem;
+}
+
+.h2t {
+    background-color: var(--colorBkText);
+
+    
+    
+    width: 11.2rem;
+    height: 3.5rem;
+
+    border-radius: 3.0rem;
+
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+
+    animation: topBottom 1.5s ease-in;  
+}
+
+h2 {    
+    font-family: var(--textLarge);
+
+    color: var(--colorText);
+
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+}
+
+.h2imgtransition {
+    position: relative;
+}
+
+.h2imgtransition > img {
+    animation: bottomTop 1s ease-out;
+    
+    object-fit: cover;    
+}
+
+p {
+    font-family: var(--textSmall);
+    color: var(--colorText);
+
+    margin-bottom: 6.3rem;
+
+    font-size: 2.0rem;
+    line-height: 1.5rem;
+}
+
+/*---Transições---*/
+@keyframes topBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottomTop {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
